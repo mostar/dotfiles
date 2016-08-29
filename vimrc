@@ -27,7 +27,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 " end of Vundle  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
+set number
 
 " pathogen plugin manager
 "execute pathogen#infect()
