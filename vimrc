@@ -39,6 +39,9 @@ set foldlevel=99
 set foldmethod=marker
 set foldmarker={,}
 "
+" python folding by 2 blanks
+autocmd Filetype python set foldmethod=indent shiftwidth=2
+
 if has("gui_running")
   " the GUI is running or about to start
   " set windows like
