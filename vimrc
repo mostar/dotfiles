@@ -1,6 +1,7 @@
 " test
-" v2 300616 from a1 add Vundle plagin manager
-" v1 161215 from r l root
+" v3 240217 from r l user : The arrow keys end...
+" v2 300616 from a1 : add Vundle plagin manager
+" v1 161215 from r l root :
 "
 
 " Vundle plagin manager   vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
@@ -47,6 +48,9 @@ if has("gui_running")
   " set windows like
   source $VIMRUNTIME/mswin.vim
   behave mswin
+  " The arrow keys end visual mode rather than extending the selection because of behave mswin. so fixing it
+  " http://vim.wikia.com/wiki/Make_arrow_keys_work_in_visual_mode_under_Windows
+  set keymodel-=stopsel
 else
   " this is console vim
 endif 
