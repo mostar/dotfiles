@@ -1,5 +1,6 @@
 " test
-" v3 240217 from r l user : The arrow keys end...
+" v4 230919 from r python adjustments
+" v3 240217 from r l user : only doc The arrow keys end...
 " v2 300616 from a1 : add Vundle plagin manager
 " v1 161215 from r l root :
 "
@@ -41,7 +42,10 @@ set foldmethod=marker
 set foldmarker={,}
 "
 " python folding by 2 blanks
-autocmd Filetype python set foldmethod=indent shiftwidth=2
+" 230918 cuase ident problen after new line let comment out:
+"autocmd Filetype python set foldmethod=indent shiftwidth=2
+"some time python code have tabs expandtab replace new tab it with space and it don't compile
+set noexpandtab
 
 if has("gui_running")
   " the GUI is running or about to start
@@ -50,7 +54,8 @@ if has("gui_running")
   behave mswin
   " The arrow keys end visual mode rather than extending the selection because of behave mswin. so fixing it
   " http://vim.wikia.com/wiki/Make_arrow_keys_work_in_visual_mode_under_Windows
-  set keymodel-=stopsel
+  "   it cause other problem so i remove it!
+  " set keymodel-=stopsel
 else
   " this is console vim
 endif 
