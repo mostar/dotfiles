@@ -45,7 +45,8 @@ set foldmarker={,}
 " 230918 cuase ident problen after new line let comment out:
 "autocmd Filetype python set foldmethod=indent shiftwidth=2
 "some time python code have tabs expandtab replace new tab it with space and it don't compile
-set noexpandtab
+"  set noexpandtab
+"not realy help, some mess google "vim python file disable expandtab", but look like tab+tab make the 1st tab
 
 if has("gui_running")
   " the GUI is running or about to start
@@ -88,3 +89,7 @@ else
     " Non-GUI (terminal) colors
     colorscheme evening
 endif
+
+" add syntax=php *.trade
+autocmd BufNewFile,BufRead *.trade set syntax=php
+
